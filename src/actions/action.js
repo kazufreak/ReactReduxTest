@@ -1,4 +1,4 @@
-export const deleatName = () => ({
+export const deleteName = () => ({
     type:"DELEATE_NAME",
     payload:''
 });

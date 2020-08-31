@@ -1,6 +1,8 @@
-import React from 'react';
-import { StyleSheet, Input,Button, Text, View } from 'react-native';
-import {store} from './src/store';
+import React,{Component} from 'react';
+import {connect} from 'react-redux';
+import {Button, Text, View } from 'react-native';
+import {store} from '../store';
+import {setName, deleteName} from '../actions/action';
 
 export class Home extends Component{
     render() {
@@ -9,7 +11,7 @@ export class Home extends Component{
             <Text style={{marginTop: 100}}>My name is {this.props.name}.</Text>
             <View style={{flexDirection: 'row'}}>
               <Button
-                onPress={this.props.deleteName}
+                onPress={this.props.deleteName()}
                 title="deleteName"
               /> 
               <Button
@@ -34,4 +36,4 @@ const mapDispatchToProps = {
     setName,
     deleteName
 }
-export default connect(mapStateToProps,mapDispatchToProps)(App)
+export default connect(mapStateToProps,mapDispatchToProps)(Home)
