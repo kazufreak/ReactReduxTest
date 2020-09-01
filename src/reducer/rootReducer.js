@@ -15,6 +15,6 @@ const reducer = (state = INITIAL_STATE, action) => {
     }
   }
 
-export const reducers = combineReducers({  
+export const rootReducers = combineReducers({  
 user: reducer
 })

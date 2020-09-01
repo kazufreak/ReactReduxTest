@@ -1,9 +1,9 @@
 export const deleteName = () => ({
-    type:"DELEATE_NAME",
-    payload:''
+    type:"DELETE_NAME",
+    name:''
 });
 
-export const setName = (name) => ({
-    type:"SET_NAME",
-    payload:name
+export const setName = name => ({
+    type:"ADD_NAME",
+    name:name
 });

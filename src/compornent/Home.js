@@ -3,15 +3,21 @@ import {connect} from 'react-redux';
 import {Button, Text, View } from 'react-native';
 import {store} from '../store';
 import {setName, deleteName} from '../actions/action';
+import { PricingCard } from 'react-native-elements';
 
 export class Home extends Component{
     render() {
         return (
           <View style={{flex: 1, justifyContent: 'space-around', alignItems: 'center'}}>
+            <PricingCard 
+            color="#4f9deb" 
+            title="呼吸確認"　
+            info={["デバイスのセンサーを利用して","呼吸を確認します"]}
+            button={{ title: 'GET STARTED', icon: 'perm-identity' }}/>
             <Text style={{marginTop: 100}}>My name is {this.props.name}.</Text>
             <View style={{flexDirection: 'row'}}>
               <Button
-                onPress={this.props.deleteName()}
+                onPress={this.props.deleteName}
                 title="deleteName"
               /> 
               <Button
