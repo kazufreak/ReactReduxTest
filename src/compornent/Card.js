@@ -1,14 +1,46 @@
-import { PricingCard } from 'react-native-elements';
+import React,{Component} from 'react';
+import { Image } from 'react-native'
+import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
-
-export class Card extends Component{
-    render() {
-        return (
-        <PricingCard 
-            color="#4f9deb" 
-            title="呼吸確認"　
-            info={["デバイスのセンサーを利用して","呼吸を確認します"]}
-            button={{ title: 'GET STARTED', icon: 'perm-identity' }}/>
-        )
-    }
+export default class ButtonCard extends Component {
+  render() {
+    return (
+      <Container>
+        <Header />
+        <Content>
+          <Card>
+            <CardItem>
+              <Left>
+                <Icon active name="thumbs-up" />
+                <Body>
+                  <Text>呼吸確認</Text>
+                  <Text note>デバイスセンサーを利用した呼吸確認</Text>
+                </Body>
+              </Left>
+            </CardItem>
+            <CardItem cardBody>
+              <Image source={{uri: 'Image URL'}} style={{height: 150, width: null, flex: 1}}/>
+            </CardItem>
+            <CardItem>
+              <Left>
+                <Button transparent>
+                  <Icon active name="thumbs-up" />
+                  <Text>12 Likes</Text>
+                </Button>
+              </Left>
+              <Body>
+                <Button transparent>
+                  <Icon active name="chatbubbles" />
+                  <Text>4 Comments</Text>
+                </Button>
+              </Body>
+              <Right>
+                <Text>11h ago</Text>
+              </Right>
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
+    );
+  }
 }
