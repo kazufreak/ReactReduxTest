@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import { Image } from 'react-native'
 import { Text, Button, Icon, Container, Content, View } from 'native-base';
+import { compose } from 'redux';
 
 export default class ButtonCard extends Component {
   render() {
@@ -15,5 +16,5 @@ export default class ButtonCard extends Component {
       </Container>
     
     );
+    }
   }
-}
