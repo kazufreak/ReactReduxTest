@@ -27,7 +27,7 @@ export class Home extends Component{
       }
     }
 const mapStateToProps = state => ({
-    // storeは巨大なJsonの塊なので、nameにjsonから取って来たデータを代入している。 
+    // test storeは巨大なJsonの塊なので、nameにjsonから取って来たデータを代入している。 
     name: state.user.name
 })
 
